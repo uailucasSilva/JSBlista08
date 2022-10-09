@@ -1,0 +1,11 @@
+label {
+    display: block;
+}
+
+input {
+    margin-bottom: 15px;
+}
+
+input[type="password"] {
+    display: block;
+}
