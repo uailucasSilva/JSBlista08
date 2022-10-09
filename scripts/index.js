@@ -1,7 +1,7 @@
 function validar() {
     user = document.getElementById("txtUser");
     pass = document.getElementById("txtPass");
-    usuarios = [];    
+    usuarios = [];
     if (user.value == "") {
         alert("O campo usuário não foi informado!");
         user.focus();
@@ -12,9 +12,11 @@ function validar() {
     }
     else {
         usuarios.push({ nome: user.value, senha: pass.value });
-        if(typeof(Storage)!="undefined")
+        if (typeof (Storage) != "undefined") {
+            alert("Usário cadastrado, veja o usuário cadastrado no link abaixo.");
             localStorage.setItem("Usuário", JSON.stringify(usuarios[0]));
+        }
         else
             alert("O navegador não possui suporte para o local storage!");
-    }    
+    }
 }
